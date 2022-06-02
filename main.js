@@ -38,7 +38,7 @@ function setup() {
   screen_width = window.innerWidth;
   screen_height = window.innerHeight;
   canvas = createCanvas(screen_width, screen_height - 150);
-  canvas.position(0, 150)
+  canvas.position(10, 150)
 }
 
 function draw() {
@@ -46,13 +46,14 @@ function draw() {
     document.getElementById("status").innerHTML = to_number + " Apples drawn";
     draw_apple = "";
     for (i = 0; i< to_number; i++) {
-      x=Math.floor(Math.random())*700;
-      y=Math.floor(Math.random())*400;
+      x=Math.floor(Math.random()*700);
+      y=Math.floor(Math.random()*400);
       image(apple, x, y, 50, 50)
     }
     document.getElementById("status").innerHTML=to_number + " Apples Drawn"
     speak_data=to_number + "Apples Drawn"
     speak()
+    draw_apple=""
 
   }
   
